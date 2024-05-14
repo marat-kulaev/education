@@ -59,8 +59,6 @@ class Chair{
 
 	Chair(){
 
-
-
 	}
 
 	Chair(Material material, String color){
