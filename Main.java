@@ -27,11 +27,19 @@ public class Main{
 		building=new Building(true);
 		System.out.println(building);
 
-		building.setType(Building.Type.COMMERCIAL);
+		building.type=Building.Type.COMMERCIAL;
 		System.out.println(building);
 
 		building.setAbandoned(0);
 		System.out.println(building);
+
+		Sentence sentence=new Sentence("Hello, world!");
+		System.out.println(sentence);
+
+		System.out.println(" words count > "+sentence.getWords().length);
+		System.out.println(" first word > "+sentence.getWord(0));
+		System.out.println(" second word > "+sentence.getWord(1));
+		System.out.println(" third word > "+sentence.getWord(2));
 
 	}
 
@@ -47,9 +55,9 @@ class Chair{
 		NYLON
 	}
 
-	final long timeSerialNumber;
-	Material material;
-	String color;
+	private final long timeSerialNumber;
+	private Material material;
+	private String color;
 
 	{
 
@@ -58,6 +66,8 @@ class Chair{
 	}
 
 	Chair(){
+
+
 
 	}
 
@@ -204,6 +214,37 @@ class Building{
 	public String toString(){
 
 		return "Building:\n timeSerialNumber > "+timeSerialNumber+"\n type > "+type+"\n abandoned > "+abandoned+"\n";
+
+	}
+
+}
+
+class Sentence{
+
+	String sentence;
+
+	Sentence(String sentence){
+
+		this.sentence=sentence;
+
+	}
+
+	String[] getWords(){
+
+		return sentence.replaceAll("[.,!;:\\-\"']","").split(" ");
+
+	}
+
+	String getWord(int i){
+
+		String[] words=getWords();
+		return i<0 || i>=words.length?null:words[i];
+
+	}
+
+	public String toString(){
+
+		return "Sentence: "+sentence;
 
 	}
 
