@@ -94,11 +94,11 @@ class Chair{
 
 		switch(material.toUpperCase()){
 
-			case "LEATHER": setMaterial(Material.LEATHER);
-			case "FABRIC": setMaterial(Material.FABRIC);
-			case "PLASTIC": setMaterial(Material.PLASTIC);
-			case "WOOD": setMaterial(Material.WOOD);
-			case "NYLON": setMaterial(Material.NYLON);
+			case "LEATHER": setMaterial(Material.LEATHER); break;
+			case "FABRIC": setMaterial(Material.FABRIC); break;
+			case "PLASTIC": setMaterial(Material.PLASTIC); break;
+			case "WOOD": setMaterial(Material.WOOD); break;
+			case "NYLON": setMaterial(Material.NYLON); break;
 			default: material=null;
 
 		}
